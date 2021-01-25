@@ -79,13 +79,14 @@ function draw() {
   packageSprite.y= packageBody.position.y 
   drawSprites();
   keyPressed();
+  KeyPressed();
  
  
 }
 
 // global varibles
 function keyPressed() {
- if (keyCode == DOWN_ARROW) {
+ if (keyCode == RIGHT_ARROW) {
     counter = counter + 1;	
 	Matter.Body.setStatic(packageBody, false);
 	helicopterSprite.x  = helicopterSprite.x + 5 ;
@@ -94,7 +95,15 @@ function keyPressed() {
 
   }
 
-
+  function KeyPressed() {
+	if (keyCode == LEFT_ARROW) {
+	   counter = counter - 1;	
+	   Matter.Body.setStatic(packageBody, false);
+	   helicopterSprite.x  = helicopterSprite.x - 5 ;
+   
+   }
+   
+	 }
 
 
 
